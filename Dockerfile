@@ -7,6 +7,7 @@ RUN apt update && apt install -y apache2 libapache2-mod-php5 wget php5-gd php5-i
 	a2enmod rewrite
 COPY start.sh /opt/start.sh
 COPY apache.conf /etc/apache2/sites-available/000-default.conf
+RUN chmod +x /opt/start.sh
 
 EXPOSE 80
 
